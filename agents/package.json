@@ -1,0 +1,41 @@
+{
+  "name": "@x402/agents",
+  "version": "1.0.0",
+  "description": "x402 AI Agents - Specialized agents with testing, observability & orchestration for Cronos",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "test": "ts-node src/test-agents.ts",
+    "test:specialized": "ts-node src/specialized/run-all-tests.ts",
+    "test:integration": "ts-node lib/test-integration.ts",
+    "test:scenarios": "ts-node testing/scenarios/scenario-runner.ts",
+    "test:testnet": "ts-node testing/testnet-integration.ts",
+    "playground": "ts-node src/playground-integration.ts",
+    "dev": "ts-node src/index.ts",
+    "build": "tsc",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "x402",
+    "cronos",
+    "ai-agents",
+    "blockchain",
+    "testing",
+    "observability",
+    "orchestration",
+    "crypto.com"
+  ],
+  "dependencies": {
+    "openai": "^4.20.1",
+    "@anthropic-ai/sdk": "^0.9.1",
+    "@crypto.com/ai-agent-client": "^1.0.2",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.4",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "typescript": "^5.7.2",
+    "ts-node": "^10.9.2"
+  }
+}

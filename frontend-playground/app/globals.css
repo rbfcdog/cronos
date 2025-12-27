@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --surface: #1a1a1a;
+  --surface-hover: #252525;
+  --border: #2a2a2a;
+  --border-hover: #3a3a3a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* React Flow Dark Theme */
+.react-flow {
+  background: #0a0a0a;
+}
+
+.react-flow__node {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+  border-radius: 8px;
+  padding: 0;
+  font-size: 12px;
+}
+
+.react-flow__node:hover {
+  border-color: #3a3a3a;
+}
+
+.react-flow__node.selected {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2);
+}
+
+.react-flow__handle {
+  background: #4a4a4a;
+  border: 2px solid #0a0a0a;
+  width: 10px;
+  height: 10px;
+}
+
+.react-flow__handle:hover {
+  background: #6366f1;
+}
+
+.react-flow__edge-path {
+  stroke: #4a4a4a;
+  stroke-width: 2;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #6366f1;
+}
+
+.react-flow__controls {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+.react-flow__controls-button {
+  background: #1a1a1a;
+  border: none;
+  color: #ededed;
+}
+
+.react-flow__controls-button:hover {
+  background: #252525;
+}
+
+.react-flow__minimap {
+  background: #1a1a1a;
+  border: 1px solid #2a2a2a;
+}
+
+.react-flow__minimap-node {
+  fill: #2a2a2a;
+}
+
+.react-flow__minimap-node.selected {
+  fill: #6366f1;
+}
+

@@ -1,0 +1,11 @@
+{
+  "network": "cronosTestnet",
+  "chainId": 338,
+  "deployer": "0xB3fdA213Ad32798724aA7aF685a8DD46f3cbd7f7",
+  "timestamp": "2025-12-25T21:11:54.112Z",
+  "contracts": {
+    "ExecutionRouter": "0x0B10060fF00CF2913a81f5BdBEA1378eD10092c6",
+    "TreasuryVault": "0x169439e816B63D3836e1E4e9C407c7936505C202",
+    "AttestationRegistry": "0xb183502116bcc1b41Bb42C704F4868e5Dc812Ce2"
+  }
+}

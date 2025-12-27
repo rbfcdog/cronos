@@ -1,0 +1,22 @@
+{
+  "name": "atlas402-scripts",
+  "version": "1.0.0",
+  "description": "Utility scripts for Atlas402 project",
+  "scripts": {
+    "fund-wallet": "ts-node fund-wallet.ts",
+    "verify-contract": "ts-node verify-contract.ts",
+    "test": "ts-node quick-test.ts",
+    "demo": "ts-node demo-flow.ts",
+    "quick-test": "ts-node quick-test.ts"
+  },
+  "dependencies": {
+    "ethers": "^6.9.0",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.2"
+  }
+}

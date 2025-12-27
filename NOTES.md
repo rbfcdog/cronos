@@ -1,0 +1,2 @@
+# NOTES
+Wallets, addresses, links
