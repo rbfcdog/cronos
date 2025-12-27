@@ -336,8 +336,11 @@ export class PlaygroundRunner {
         throw new Error("Missing recipient or amount");
       }
 
+      // Generate UNIQUE executionId to avoid "Already executed" errors
+      const uniqueExecutionId = `playground-${runId}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
       const result = await cronosService.executePaymentViaRouter(
-        `playground-${runId}`,
+        uniqueExecutionId,
         action.to,
         action.amount,
         "Payment via x402 Playground"
@@ -413,8 +416,11 @@ export class PlaygroundRunner {
 
       // For ExecutionRouter, use real contract call
       if (action.contract === "ExecutionRouter") {
+        // Generate UNIQUE executionId to avoid "Already executed" errors
+        const uniqueExecutionId = `playground-${runId}-call-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+
         const result = await cronosService.executePaymentViaRouter(
-          `playground-${runId}-call`,
+          uniqueExecutionId,
           action.args?.[0] || "",
           action.args?.[1] || "0",
           action.args?.[2] || ""
