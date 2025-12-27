@@ -58,7 +58,7 @@ export default function BlockItem({ block, onRemove, onUpdate }: BlockItemProps)
         
         <div className="flex-1">
           <h3 className="font-medium text-gray-900 capitalize">
-            {block.type.replace(/_/g, " ")}
+            {block.type ? block.type.replace(/_/g, " ") : "Unknown"}
           </h3>
           {Object.keys(block.data).length > 0 && (
             <p className="text-xs text-gray-600 mt-1">

@@ -148,7 +148,7 @@ export default function TraceViewer({ trace, isLoading }: TraceViewerProps) {
                     <div className="flex items-center gap-2">
                       <span className="text-xs font-mono text-gray-500">Step {index + 1}</span>
                       <span className="font-semibold text-sm text-gray-200">
-                        {step.action?.type?.replace(/_/g, " ").toUpperCase() || "Unknown Action"}
+                        {step.action?.type ? step.action.type.replace(/_/g, " ").toUpperCase() : "Unknown Action"}
                       </span>
                       {getStatusIcon(step.status)}
                     </div>

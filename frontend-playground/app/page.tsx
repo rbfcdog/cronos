@@ -181,7 +181,7 @@ export default function Home() {
         position,
         data: {
           actionType: type,
-          label: type.replace(/_/g, " "),
+          label: type ? type.replace(/_/g, " ") : "Unknown",
           params: {},
         },
       };
