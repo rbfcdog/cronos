@@ -5,6 +5,12 @@
  * - Recurring Payment Agent
  * - Portfolio Rebalancing Agent
  * - Treasury Management Agent
+ * 
+ * ⚠️ IMPORTANT: ALL addresses MUST come from .env file:
+ * - DEPLOYER_ADDRESS: 0xB3fdA213Ad32798724aA7aF685a8DD46f3cbd7f7
+ * - EXECUTOR_ADDRESS: 0x36aE091C6264Cb30b2353806EEf2F969Dc2893f8
+ * 
+ * DO NOT use any other addresses - they will fail validation!
  */
 
 import { ExecutionPlan, ExecutionAction } from "./types";
@@ -42,7 +48,7 @@ export const recurringPaymentSimple: WorkflowTemplate = {
       },
       {
         type: "x402_payment",
-        to: "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb1",
+        to: "0xB3fdA213Ad32798724aA7aF685a8DD46f3cbd7f7",
         amount: "5",
         token: "TCRO",
         description: "Pay 5 TCRO salary to Alice",
@@ -77,21 +83,21 @@ export const recurringPaymentMulti: WorkflowTemplate = {
       },
       {
         type: "x402_payment",
-        to: "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb1",
+        to: "0xB3fdA213Ad32798724aA7aF685a8DD46f3cbd7f7",
         amount: "5",
         token: "TCRO",
         description: "Salary: Alice (5 TCRO)",
       },
       {
         type: "x402_payment",
-        to: "0x8626f6940E2eb28930eFb4CeF49B2d1F2C9C1199",
+        to: "0x36aE091C6264Cb30b2353806EEf2F969Dc2893f8",
         amount: "3",
         token: "TCRO",
         description: "Salary: Bob (3 TCRO)",
       },
       {
         type: "x402_payment",
-        to: "0xdD2FD4581271e230360230F9337D5c0430Bf44C0",
+        to: "0xB3fdA213Ad32798724aA7aF685a8DD46f3cbd7f7",
         amount: "4",
         token: "TCRO",
         description: "Salary: Charlie (4 TCRO)",
@@ -210,7 +216,7 @@ export const treasuryBasic: WorkflowTemplate = {
       },
       {
         type: "x402_payment",
-        to: "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb1",
+        to: "0x36aE091C6264Cb30b2353806EEf2F969Dc2893f8",
         amount: "5",
         token: "TCRO",
         description: "Contributor payment (5 TCRO)",
